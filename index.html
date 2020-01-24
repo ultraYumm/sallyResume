@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+</head>
+
+<header id="application-root2"></header>
+<body>
+
+  <main id="application-root"></main>
+  
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+
+<script type="text/babel">
+ // Our code will go here
+
+ const anchor = (
+  <a href='https://thinkful.com' target='_blank'>
+    Thinkful
+  </a>
+);
+
+ const appRoot = document.querySelector('#application-root');
+
+
+ function App() {
+  return (
+    <main>
+
+<section>
+  <h2>Summary</h2>
+  <p>Accomplished hiker and nutrition coach who is learning how to code to build an amazing menu planning tool for ultralight travelers.</p>
+</section>
+
+<section>
+  <h2>Contact Info <img src="https://m.media-amazon.com/images/M/MV5BMTY5NzE3NzU3MF5BMl5BanBnXkFtZTgwMjg0NTQ5MDE@._V1_.jpg" alt="Sally Cairn Profile Picture" height="100" width="80"/></h2>
+  <address>
+  <p class='small'>Sally Cairn, <a href="mailto:tf.sally.student@gmail.com" target="_blank">sally.student@gmail.com,</a> 234-456-7891 (cell)</p>
+  <p class='small'>1245 Snowy Peak Rd., Bend, CA 90776 USA</p>
+  </address>
+  
+  <h2>Education</h2>
+  <p class='small'>Completing Web Developper Track Certification,  <a href="https://bloc.thinkful.com" target="_blank">Bloc</a></p>
+  <p class='small'>MBA,  <a href="https://www.utoronto.ca"  target= "_blank">University of Toronto</a></p>
+  
+  <h2>Work Experience</h2>
+  <p class= 'work small'>Marketing Manager, Honda, 2007-current</p>
+    <ul>
+      <li><p>Launched brand marketing campaigns and websites</p></li>
+      <li><p>Managed targeted incentives</p></li></ul>
+  <p class= 'work small'>Banker, Citigroup, 1997-2005
+    </p>
+    <ul>
+      <li><p>Helped buy and sell companies</p></li>
+      <li><p>Managed targeted incentives</p></li>
+    </ul>
+</section>
+
+</main>
+  );
+};
+
+
+const headerStyle = {
+  color: 'blue',
+ };
+
+function App2(props) {
+  var props = "Sally Student Resume"
+  return (
+    <header style={headerStyle}><h1>
+      {props}</h1>
+    </header>
+  );
+}
+
+ReactDOM.render(
+  <App />,
+  document.querySelector('#application-root')
+);
+
+ReactDOM.render(
+  <App2 />,
+  document.querySelector('#application-root2')
+);
+
+
+
+</script>
+
+
+
+</body>
+</html>
